@@ -6,6 +6,7 @@ echo ""
 echo "Detecting existing installation.."
 if [ -d /srv/updater ]; then
     echo "Auto update script already installed."
+    echo ""
     exit
 fi
 if [ -d /var/www/pterodactyl ]; then
