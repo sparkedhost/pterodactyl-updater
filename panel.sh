@@ -1,9 +1,11 @@
+#!/bin/sh
+
 PATH_TO_INSTALLATION=/var/www/pterodactyl
 
 LATEST_VERSION=$(curl --silent https://cdn.pterodactyl.io/releases/latest.json | jq '.panel' | sed 's/"//g')
 CURRENT_VERSION=$(php artisan p:info | grep 'Panel Version' | awk '{ print substr ($0, 20 ) }')
 
-if [ "$LATEST_VERSION" == "$CURRENT_VERSION" ]
+if [ "$LATEST_VERSION" = "$CURRENT_VERSION" ]
 then
   exit
 fi

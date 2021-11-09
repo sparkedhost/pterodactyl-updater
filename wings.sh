@@ -1,9 +1,11 @@
+#!/bin/sh
+
 PATH_TO_INSTALLATION=/usr/local/bin/wings
 
 LATEST_VERSION=$(curl --silent https://cdn.pterodactyl.io/releases/latest.json | jq '.wings' | sed 's/"//g')
 CURRENT_VERSION=$(wings version | grep wings | awk '{ print substr ($0, 8 ) }')
 
-if [ "$LATEST_VERSION" == "$CURRENT_VERSION" ]
+if [ "$LATEST_VERSION" = "$CURRENT_VERSION" ]
 then
   exit
 fi
