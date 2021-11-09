@@ -25,6 +25,13 @@ if [ ! command -v curl &> /dev/null ]; then
   apt-get update
   apt-get install curl
 fi
+
+if [ ! command -v jq &> /dev/null ]; then
+  echo "Installing jq.."
+  apt-get update
+  apt-get install jq
+fi
+
 echo "Detecting existing installation.."
 if [ -d /srv/updater ]; then
     echo "Auto update script already installed."
