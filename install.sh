@@ -10,7 +10,6 @@ echo ""
 echo "Sparked Host Pterodactyl Updater"
 echo "Developed by harry.w@sparked.support"
 echo ""
-echo "Checking dependencies.."
 
 if [ $EUID -ne 0 ]; then
   echo "Please run the command with sudo."
@@ -30,7 +29,7 @@ echo "Detecting existing installation.."
 if [ -d /srv/updater ]; then
     echo "Auto update script already installed."
     echo ""
-    exit
+    quit
 fi
 if [ -d /var/www/pterodactyl ]; then
     echo "Pterodactyl Panel Installation detected."
