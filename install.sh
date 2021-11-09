@@ -20,17 +20,9 @@ if [ ! command -v apt-get &> /dev/null ]; then
   quit
 fi
 
-if [ ! command -v curl &> /dev/null ]; then
-  echo "Installing curl.."
-  apt-get update
-  apt-get install curl
-fi
-
-if [ ! command -v jq &> /dev/null ]; then
-  echo "Installing jq.."
-  apt-get update
-  apt-get install jq
-fi
+echo "Installing dependencies.."
+apt-get update
+apt-get install -y curl jq
 
 echo "Detecting existing installation.."
 if [ -d /srv/updater ]; then
