@@ -1,6 +1,7 @@
 #!/bin/sh
 
 PATH_TO_INSTALLATION=/var/www/pterodactyl
+cd $PATH_TO_INSTALLATION
 
 LATEST_VERSION=$(curl --silent https://cdn.pterodactyl.io/releases/latest.json | jq '.panel' | sed 's/"//g')
 CURRENT_VERSION=$(php artisan p:info | grep 'Panel Version' | awk '{ print substr ($0, 20 ) }')
@@ -10,7 +11,6 @@ then
   exit
 fi
 
-cd $PATH_TO_INSTALLATION
 export COMPOSER_ALLOW_SUPERUSER=1;
 echo "Setting Panel to maintenance mode.."
 php artisan down
