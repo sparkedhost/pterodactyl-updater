@@ -68,4 +68,12 @@ if [ -d /var/lib/pterodactyl ]; then
       echo "0 1 */2 * * sh /srv/updater/wings.sh >> /dev/null 2>&1"
     } | crontab -
 fi
+echo "Downloading main update script.."
+curl -o /srv/updater/update.sh https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/develop/update.sh
+echo "Adding main update script to crontab.."
+crontab -l | {
+  cat
+  echo "0 1 */1 * * sh /srv/updater/update.sh >> /dev/null 2>&1"
+} | crontab -
+echo "Installation complete."
 quit
