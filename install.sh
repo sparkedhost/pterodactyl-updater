@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 quit() {
   echo ""
@@ -21,20 +21,17 @@ if [ ! command -v apt-get &> /dev/null ]; then
   quit
 fi
 
-if [ $1 == '--manual' ] || [ $2 == '--manual' ]
-then
+if [ "$1" = '--manual' ] || [ "$2" = '--manual' ]; then
  echo "Manual mode enabled."
 fi
 
-if [ $1 == '--no-dependencies' ] || [ $2 == '--no-dependencies' ]
-then
+if [ "$1" = '--no-dependencies' ] || [ "$2" = '--no-dependencies' ]; then
  echo "Skipping dependency install."
 else
   echo "Installing dependencies.."
   apt-get update
   apt-get install -y curl jq
 fi
-
 
 echo "Detecting existing installation.."
 if [ -d /srv/updater ]; then
