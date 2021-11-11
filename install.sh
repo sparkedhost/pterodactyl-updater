@@ -51,7 +51,7 @@ if [ -d /var/www/pterodactyl ]; then
     echo "Adding Panel update script to crontab.."
     crontab -l | {
       cat
-      echo "0 1 */2 * * sh /srv/updater/panel.sh >> /dev/null 2>&1"
+      echo "5 1 */2 * * sh /srv/updater/panel.sh >> /dev/null 2>&1"
     } | crontab -
 fi
 if [ -d /var/lib/pterodactyl ]; then
@@ -65,7 +65,7 @@ if [ -d /var/lib/pterodactyl ]; then
     echo "Adding Wings update script to crontab.."
     crontab -l | {
       cat
-      echo "0 1 */2 * * sh /srv/updater/wings.sh >> /dev/null 2>&1"
+      echo "5 1 */2 * * sh /srv/updater/wings.sh >> /dev/null 2>&1"
     } | crontab -
 fi
 echo "Downloading main update script.."
