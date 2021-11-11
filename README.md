@@ -7,4 +7,4 @@ Running the script via the command above will automatically install the needed d
 ## Installation
 **Stable:** `wget https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/release/v1.0.0/install.sh; chmod +x install.sh; ./install.sh`
 
-**Beta:** `wget https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/develop/install.sh; chmod +x install.sh; ./install.sh`
+**Beta** (no support)**:** `wget https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/develop/install.sh; chmod +x install.sh; ./install.sh`
