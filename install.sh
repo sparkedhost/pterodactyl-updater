@@ -47,7 +47,7 @@ if [ -d /var/www/pterodactyl ]; then
       mkdir /srv/updater
     fi
     echo "Downloading Panel update script.."
-    curl -o /srv/updater/panel.sh https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/main/panel.sh
+    curl -o /srv/updater/panel.sh https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/develop/panel.sh
     echo "Adding Panel update script to crontab.."
     crontab -l | {
       cat
@@ -61,7 +61,7 @@ if [ -d /var/lib/pterodactyl ]; then
       mkdir /srv/updater
     fi
     echo "Downloading Wings update script.."
-    curl -o /srv/updater/wings.sh https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/main/wings.sh
+    curl -o /srv/updater/wings.sh https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/develop/wings.sh
     echo "Adding Wings update script to crontab.."
     crontab -l | {
       cat
