@@ -23,13 +23,8 @@ fi
 
 if [ "$1" = '--help' ]; then
  echo "--help - Shows this screen"
- echo "--manual - Enables manual mode"
  echo "--no-dependencies - Skips installing required packages"
  quit
-fi
-
-if [ "$1" = '--manual' ] || [ "$2" = '--manual' ]; then
- echo "Manual mode enabled."
 fi
 
 if [ "$1" = '--no-dependencies' ] || [ "$2" = '--no-dependencies' ]; then
