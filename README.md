@@ -3,6 +3,7 @@ A script to automatically update Pterodactyl Panel &amp; Wings.
 
 ## Installation
 Stable: `bash <(curl -s https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/release/v1.0.0/install.sh)`
+
 Beta: `bash <(curl -s https://raw.githubusercontent.com/SparkedHost/Pterodactyl-Updater/develop/install.sh)`
 
 ## How it works
