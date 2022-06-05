@@ -26,7 +26,7 @@ php artisan config:clear
 echo "Running migrations.."
 php artisan migrate --seed --force
 echo "Setting permissions.."
-chown -R www-data:www-data /var/www/pterodactyl/*
+chown -R www-data:www-data *
 echo "Restarting queue worker.."
 php artisan queue:restart
 echo "Restoring Panel functionality.."
