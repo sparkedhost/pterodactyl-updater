@@ -8,7 +8,7 @@ quit() {
 clear
 echo ""
 echo "Sparked Host Pterodactyl Updater"
-echo "Developed by harry.w@sparked.support"
+echo "Developed by harry.w@sparkedhost.com"
 echo ""
 
 if [ $EUID -ne 0 ]; then
